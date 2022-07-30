@@ -5,16 +5,18 @@ ul {
   margin: 0;
   padding: 10px;
 }
+.weather-app-wraper {
+  margin: 30px auto;
+  max-width: 600px;
+}
 .weather-app-container {
   text-align: left;
   padding: 20px;
   padding-top: 0;
-  margin: 30px auto;
   font-family: "Arimo", sans-serif;
   font-size: 20px;
   border: 1px solid;
   border-radius: 10px;
-  max-width: 600px;
   background: #e3f6f5;
 }
 .description {
@@ -24,11 +26,25 @@ ul {
   margin: 15px 10px;
   text-align: left;
 }
+.city,
+.day-temp {
+  font-weight: bold;
+  font-size: 35px;
+}
 
+.day,
+.date,
+.current-weather {
+  font-size: 25px;
+}
+.units {
+  font-size: 25px;
+  font-weight: normal;
+}
 .btn-info {
   color: #fff;
 }
 
 .target {
-  margin: 30px;
+  margin: 30px auto;
 }

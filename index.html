@@ -18,63 +18,63 @@
 
 <body>
   <div class="container">
-    <div class="weather-app-container">
-      <form class="enter-city" id="enter-city">
-        <input type="search" id="city-input" placeholder="Enter city" autofocus="on" />
-        <input type="submit" class="btn btn-primary" value="Change" />
-        <button type="button" class="btn btn-info">Current</button>
-      </form>
-      <div class="row">
-        <div class="col-6">
-          <ul>
-            <li>
-              <span class="city" id="city"> Dnipro</span><span class="country"> </span>
-            </li>
-            <li>
-              <div class="day" id="dayTime">
-                Wen 13:28
-              </div>
-              <div class="date" id="date">
-                25.06.2022
-              </div>
-            </li>
+    <div class="weather-app-wraper">
+      <div class="weather-app-container">
+        <form class="enter-city" id="enter-city">
+          <input type="search" id="city-input" placeholder="Enter city" autofocus="on" />
+          <input type="submit" class="btn btn-primary" value="Change" />
+          <button type="button" class="btn btn-info">Current</button>
+        </form>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li>
+                <span class="city" id="city"> Dnipro</span><span class="country"> </span>
+              </li>
+              <li>
+                <br>
+                <div id="current-weather">
+                  Sunni skies</div>
+                Humidity: <span id="humidity"> </span> %
+                <br>
+                Winds: <span id="wind"> </span> km/h
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 description">
+            <ul>
+              <li>
+                <div class="day-temp">
+                  <span class="temperature" id="temp">
+                    40
+                  </span>
+                  <span class="units">
+                    <a href="#" id="celsius-link">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                  <span><img src="images/icons8-sun-200.png" alt="sun" class="icon-today">
+                  </span>
+              </li>
+              <li>
+                <br>
+                <div class="day" id="dayTime">
+                  Wen 13:28
+                </div>
+                <div class="date" id="date">
+                  25.06.2022
+                </div>
+              </li>
+            </ul>
+          </div>
 
-          </ul>
+
+
         </div>
-
-        <div class="col-6 description">
-          <ul>
-            <li>
-              <div class="day-temp">
-                <span class="temperature" id="temp">
-                  40
-                </span>
-                <span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span>
-                <span><img src="images/icons8-sun-200.png" alt="sun" class="icon-today">
-                </span>
-            </li>
-            <li>
-              <span id="current-weather">
-                Sunni skies</span>
-              <br>
-              Humidity: <span id="humidity"> </span> %
-              <br>
-              Winds: <span id="wind"> </span> km/h
-            </li>
-          </ul>
-
-        </div>
-
-
-
       </div>
+      <small><span class="target"><a href="https://github.com/VickyBondarenko/weather-app" target="_blank">Open-source
+            code</a>, by Vicky Bondarenko</span></small>
+      </a>
     </div>
-    <small><span class="target"><a href="https://github.com/VickyBondarenko/weather-app" target="_blank">Open-source
-          code</a>, by Vicky Bondarenko</span></small>
-    </a>
   </div>
   <script src="srs/app.js"></script>
 </body>
