@@ -1,0 +1,34 @@
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 10px;
+}
+.weather-app-container {
+  text-align: left;
+  padding: 20px;
+  padding-top: 0;
+  margin: 30px auto;
+  font-family: "Arimo", sans-serif;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  max-width: 600px;
+  background: #e3f6f5;
+}
+.description {
+  padding: 0;
+}
+.enter-city {
+  margin: 15px 10px;
+  text-align: left;
+}
+
+.btn-info {
+  color: #fff;
+}
+
+.target {
+  margin: 30px;
+}
