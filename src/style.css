@@ -5,6 +5,9 @@ ul {
   margin: 0;
   padding: 10px;
 }
+a {
+  text-decoration: none;
+}
 .weather-app-wraper {
   margin: 30px auto;
   max-width: 600px;
@@ -38,7 +41,6 @@ ul {
   font-size: 25px;
 }
 .units {
-  font-size: 25px;
   font-weight: normal;
   font-size: 20px;
   position: relative;
@@ -46,6 +48,14 @@ ul {
 }
 .btn-info {
   color: #fff;
+}
+.day-temp .active {
+  color: black;
+  cursor: default;
+}
+
+.day-temp .active:hover {
+  text-decoration: underline;
 }
 
 .target {
