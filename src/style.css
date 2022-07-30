@@ -51,7 +51,7 @@ a {
   color: #fff;
 }
 .day-temp .active {
-  color: black;
+  color: #212529;
   cursor: default;
 }
 
