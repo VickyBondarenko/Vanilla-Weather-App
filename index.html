@@ -26,14 +26,14 @@
           <button type="button" class="btn btn-info">Current</button>
         </form>
         <div class="row">
-          <div class="col-6">
+          <div class="col-4">
             <ul>
               <li>
                 <span class="city" id="city"> Dnipro</span><span class="country"> </span>
               </li>
               <li>
                 <br>
-                <div id="current-weather">
+                <div class="current-weather" id="current-weather">
                   Sunni skies</div>
                 Humidity: <span id="humidity"> </span> %
                 <br>
@@ -41,19 +41,17 @@
               </li>
             </ul>
           </div>
-          <div class="col-6 description">
+          <div class="col-5 description">
             <ul>
               <li>
                 <div class="day-temp">
                   <span class="temperature" id="temp">
-
                   </span>
                   <span class="units">
                     <a href="#" id="celsius-link" class="active">°C</a> |
                     <a href="#" id="fahrenheit-link">°F</a>
                   </span>
-                  <span><img src="images/icons8-sun-200.png" alt="sun" class="icon-today">
-                  </span>
+
               </li>
               <li>
                 <br>
@@ -66,9 +64,10 @@
               </li>
             </ul>
           </div>
-
-
-
+          <div class="col">
+            <span><img src="" alt="sun" class="icon-today" id="icon" weight="200">
+            </span>
+          </div>
         </div>
       </div>
       <small><span class="target"><a href="https://github.com/VickyBondarenko/weather-app" target="_blank">Open-source

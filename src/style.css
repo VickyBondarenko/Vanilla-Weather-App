@@ -30,14 +30,15 @@ a {
   text-align: left;
 }
 .city,
-.day-temp {
+.day-temp,
+.current-weather {
   font-weight: bold;
   font-size: 35px;
 }
 
 .day,
-.date,
 .current-weather {
+  font-weight: bold;
   font-size: 25px;
 }
 .units {
