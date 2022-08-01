@@ -45,6 +45,29 @@ function formatDate(date) {
   let year = dateNow.getFullYear();
   return `${dates}.${month}.${year}`;
 }
+function displayForcast() {
+  let forcastElement = document.querySelector("#forcast");
+  let forcastHTML = `<div class="row">`;
+  let days = ["thu", "fri", "sat"];
+  days.forEach(function (day) {
+    forcastHTML =
+      forcastHTML +
+      ` <div class="col-3">
+              <div class="card card-day">
+                <div class="card-body">
+                  <h5 class="card-title">${day}</h5>
+                  <span><img src="" alt="sun" class="icon-today" id="icon" weight="45">
+                  </span>
+                  <p class="card-text"><span class weather-forcast-tempersture-max><strong> 25</span>°C </strong><span
+                      class weather-forcast-tempersture-min> 16°C</p>
+                </div>
+              </div>
+            </div>
+          `;
+  });
+  forcastHTML = forcastHTML + `</div>`;
+  forcastElement.innerHTML = forcastHTML;
+}
 
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
@@ -141,3 +164,4 @@ dateElement.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#enter-city");
 searchForm.addEventListener("submit", handleSubmit);
 search("Dnipro");
+displayForcast();
