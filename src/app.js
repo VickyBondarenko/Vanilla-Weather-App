@@ -45,28 +45,53 @@ function formatDate(date) {
   let year = dateNow.getFullYear();
   return `${dates}.${month}.${year}`;
 }
-function displayForcast() {
+
+function formatday(timeStemp) {
+  let date = new Date(timeStemp * 1000);
+  let day = date.getDay();
+  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+  return days[day];
+}
+
+function displayForcast(response) {
+  let forcast = response.data.daily;
+
   let forcastElement = document.querySelector("#forcast");
   let forcastHTML = `<div class="row">`;
-  let days = ["thu", "fri", "sat"];
-  days.forEach(function (day) {
-    forcastHTML =
-      forcastHTML +
-      ` <div class="col-3">
+
+  forcast.forEach(function (forcastDay, index) {
+    if (index < 6) {
+      forcastHTML =
+        forcastHTML +
+        ` <div class="col-2">
               <div class="card card-day">
                 <div class="card-body">
-                  <h5 class="card-title">${day}</h5>
-                  <span><img src="" alt="sun" class="icon-today" id="icon" weight="45">
+                  <h5 class="card-title">${formatday(forcastDay.dt)}</h5>
+                  <span><img src="http://openweathermap.org/img/wn/${
+                    forcastDay.weather[0].icon
+                  }@2x.png" alt="sun" class="icon-forcast" id="icon" weight="15">
                   </span>
-                  <p class="card-text"><span class weather-forcast-tempersture-max><strong> 25</span>°C </strong><span
-                      class weather-forcast-tempersture-min> 16°C</p>
+                  <p class="card-text"><strong><span class weather-forcast-tempersture-max> ${Math.round(
+                    forcastDay.temp.max
+                  )}</span>°C </strong><span
+                      class weather-forcast-tempersture-min> ${Math.round(
+                        forcastDay.temp.min
+                      )}°C</p>
                 </div>
               </div>
             </div>
           `;
+    }
   });
   forcastHTML = forcastHTML + `</div>`;
   forcastElement.innerHTML = forcastHTML;
+}
+function getForcast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "f127cb208f2bd0106804f1fe6bc22525";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForcast);
 }
 
 function showTemperature(response) {
@@ -96,6 +121,8 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForcast(response.data.coord);
 }
 
 function search(city) {
@@ -164,4 +191,3 @@ dateElement.innerHTML = formatDate(currentTime);
 let searchForm = document.querySelector("#enter-city");
 searchForm.addEventListener("submit", handleSubmit);
 search("Dnipro");
-displayForcast();
