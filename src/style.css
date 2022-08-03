@@ -21,8 +21,9 @@ h5 {
   padding-top: 0;
   font-family: "Arimo", sans-serif;
   font-size: 18px;
-  border: 1px solid;
+  border: 1px solid #d0d2d6;
   border-radius: 10px;
+  background: #f3f4f6;
 }
 .description {
   padding: 0;
@@ -51,6 +52,10 @@ h5 {
 .btn-info {
   color: #fff;
 }
+.btn {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
 .day-temp .active {
   color: #212529;
   cursor: default;
@@ -64,11 +69,14 @@ h5 {
   margin: 30px auto;
 }
 .card-day {
-  border-radius: 10px;
   font-size: 15px;
-
   margin: 10px;
   text-align: center;
+  position: relative;
+  transition: all 150ms ease-in-out;
+}
+.card-day:hover {
+  top: 10px;
 }
 .card-body {
   margin: 0px;
@@ -82,4 +90,30 @@ h5 {
 
 .icon-today {
   max-width: 500px;
+}
+.col-2 {
+  padding: 0px;
+}
+.card-day,
+.icon-today {
+  border: 0 solid #d0d2d6;
+  background: #fcfcfc;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+#city-input {
+  border: 0 solid #d0d2d6;
+  background: #fcfcfc;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+}
+
+.weather-forcast-tempersture-min,
+.date,
+.conditions {
+  opacity: 0.8;
 }

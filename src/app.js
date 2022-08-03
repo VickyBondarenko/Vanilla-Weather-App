@@ -86,6 +86,7 @@ function displayForcast(response) {
   forcastHTML = forcastHTML + `</div>`;
   forcastElement.innerHTML = forcastHTML;
 }
+
 function getForcast(coordinates) {
   console.log(coordinates);
   let apiKey = "f127cb208f2bd0106804f1fe6bc22525";
@@ -104,7 +105,7 @@ function showTemperature(response) {
   let currentWeather = document.querySelector("#current-weather");
   currentWeather.innerHTML = weather;
 
-  let wind = Math.round(response.data.wind.speed * 3.6);
+  let wind = Math.round(response.data.wind.speed);
   let currentWind = document.querySelector("#wind");
   currentWind.innerHTML = wind;
 
@@ -135,7 +136,6 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-
   let curentCityElement = document.querySelector("#city-input");
   let city = curentCityElement.value;
   search(city);
@@ -183,11 +183,14 @@ celsiusLink.addEventListener("click", changeCelsius);
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
+
 let currentTime = new Date();
 let dayTimeElement = document.querySelector("#dayTime");
 dayTimeElement.innerHTML = formatDayTime(currentTime);
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate(currentTime);
+
 let searchForm = document.querySelector("#enter-city");
 searchForm.addEventListener("submit", handleSubmit);
+
 search("Dnipro");
