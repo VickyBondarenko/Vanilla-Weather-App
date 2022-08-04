@@ -37,7 +37,6 @@ h5 {
   font-weight: bold;
   font-size: 35px;
 }
-
 .day,
 .current-weather {
   font-weight: bold;
@@ -49,22 +48,20 @@ h5 {
   position: relative;
   top: -10px;
 }
-.btn-info {
-  color: #fff;
-}
 .btn {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.btn-info {
+  color: #fff;
 }
 .day-temp .active {
   color: #212529;
   cursor: default;
 }
-
 .day-temp .active:hover {
   text-decoration: underline;
 }
-
 .target {
   margin: 30px auto;
 }
