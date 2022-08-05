@@ -71,10 +71,10 @@ function displayForcast(response) {
                     forcastDay.weather[0].icon
                   }@2x.png" alt="sun" class="icon-forcast" id="icon" weight="15">
                   </span>
-                  <p class="card-text"><strong><span class weather-forcast-tempersture-max> ${Math.round(
+                  <p class="card-text"><strong><span class="weather-forcast-tempersture-max"> ${Math.round(
                     forcastDay.temp.max
                   )}</span>°C </strong><span
-                      class weather-forcast-tempersture-min> ${Math.round(
+                      class = "weather-forcast-tempersture-min"> ${Math.round(
                         forcastDay.temp.min
                       )}°C</p>
                 </div>
